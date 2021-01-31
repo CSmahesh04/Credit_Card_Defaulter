@@ -30,14 +30,14 @@ After mounting my google drive onto Google collab, the first thing I did was loo
 
 <h5 align="center">Datatypes in the Dataset</h5>
 <p align="center">
-  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/info.PNG" width=600>
+  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/info.PNG" width=600 height=500>
 </p>
 
 Next I performed a preliminary statistical analysis of all the columns,this can be seen in the picture below. The main insights from this are that the average credit limit of the customers is **1500 New Taiwan Dollar(TWD)**, and the maximum is **30,000 TWD**. The average age of the customers for this bank is 25 years with the youngest customer being 21 years old and oldest being 79. This shows that the bank's primary customer base is made up of young adults in their 20's. Historically young adults are considered to be very high risk to lend money to.
 
 <h5 align="center">Statistical Information on the Dataset</h5>
 <p align="center">
-  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/describe.PNG" width=600>
+  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/describe.PNG" width=650 height=350>
 </p>
 
 </details>
@@ -52,54 +52,54 @@ Upon a quick inspection, the data seems to have no null/missing values. Below is
 
 <h5 align="center">Histogram Plot of all Columns</h5>
 <p align="center">
-  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/red_hist.PNG" width=600>
+  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/red_hist.PNG" width=850>
 </p>
 
 Looking at the data closely, it is evident that the dataset with respect to the total number of defaulters is not balanced. Out of a total of 30,000 customers, only 6,636 have defaulted on their payments. That is approximately 22.12% only. The remaining 77.88 percent of customers have paid back their credit card debt. This unbalanced dataset is not ideal, but when it comes to fraud detection, an unbalanced dataset is a common occurrence. A heatmap is a very convenient and powerful way to find any obscure correlations between features.
 
 <h5 align="center">Heatmap of Correlations</h5>
 <p align="center">
-  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/heatmap.PNG" width=600>
+  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/heatmap.PNG" width=850>
 </p>
 
 Next I wanted to check whether Age, Sex, Education or Marital Status have any bearing on a customer defaulting on their payment. It seems like there are more female customers than male customers and that women in general seem to be more careful in paying back their credit cards. There also seems to be credit card debt amongst married customers rather than single ones.
 
 <h5 align="center">Bar Graphs of Age, Sex, Education and Marital Status</h5>
 <p align="center">
-  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/age.PNG" width=600>
+  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/age.PNG" width=800>
 </p>
 
 <p align="center">
-  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/graph_1.PNG" width=600>
+  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/graph_1.PNG" width=850>
 </p>
 
 <p align="center">
-  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/graph_2.PNG" width=600>
+  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/graph_2.PNG" width=850>
 </p>
 
 I now want to check if the defaulter's credit limit tends to deviate from the general trend of those who don't default. The below graph is a combination of both a histogram and KDE. It seems like there is no outstanding feature with regards to credit limit when it comes to defaulting on payment.
 
 <h5 align="center">Credit Limit vs Defaulting</h5>
 <p align="center">
-  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/kde1.PNG" width=600>
+  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/kde1.PNG" width=750>
 </p>
 
 The below graph shows us the total amount paid by customers previously on their credit cards. From the graph it is evident that customers who default on payment usually tend to not pay a lot of their previous bills. This is shown by the high frequency of defaulters paying very little in their historic bill payment record.
 
 <h5 align="center">Previous Payments by Customers</h5>
 <p align="center">
-  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/kde2.PNG" width=600>
+  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/kde2.PNG" width=750>
 </p>
 
 The distribution of gender with respect to the total credit limit does not seem to have any credence. The same plot with marital status vs credit limit seems to show us that the average married customer has a higher limit than everyone else. There also seems to be many outliers for each status, which I find odd.
 
 <h5 align="center">Boxplots of Sex and Marriage vs Credit Limit</h5>
 <p align="center">
-  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/box1.PNG" width=600>
+  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/box1.PNG" width=700>
 </p>
 
 <p align="center">
-  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/box2.PNG" width=600>
+  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/box2.PNG" width=700>
 </p>
 </details>
 
@@ -111,7 +111,7 @@ The distribution of gender with respect to the total credit limit does not seem 
   
 The Sex, Education and Marriage are categorical columns with more than 2 categories. I used the **OneHotEncoder** function from **Sci-kit Learn** library. This converts the below shows table from this:
 <p align="center">
-  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/sex_normal.PNG" width=600>
+  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/sex_normal.PNG" width=400>
 </p>
 
 To this table:
