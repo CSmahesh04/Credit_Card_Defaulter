@@ -135,7 +135,7 @@ For all the above models I trained them each without GridSearch initially and th
 
 <h5 align="center">Models Accuracy Table</h5>
 <p align="center">
-  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/models.PNG" width=600>
+  <img src="https://github.com/CSmahesh04/Credit_Card_Defaulter/blob/main/Images/models2.PNG" width=600>
 </p>
 
 Since I realized XGBoost was performing the best I spent some more time trying to optimize the model by tuning the hyperparameters. But even after getting the most optimal performance on the dataset, the f1-score for the defaulters was low. This is definitely because of the severely unbalanced dataset. Below is the heatmap of the confusion matrix and classification report of the optimized XGBoost model on the final test data.
