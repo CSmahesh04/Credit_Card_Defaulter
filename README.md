@@ -1,4 +1,4 @@
-<h1 align='center'>CREDIT CARD DEFAULTER CLASSIFIER</h1>
+<h1 align='center'>CRDIT CARD DEFAULTER CLASSIFIER</h1>
 
 Credit Card defaulters are a huge liability to any bank which offers the service. It can lead to millions of dollars in revenue loss. To mitigate this loss, companies employ Data Scientists to build models to predict whether a customer will be likely to default on the payment or not. Data Scientists in these companies utilize various historic and demographic data points such as Age, Gender, Education level, Marital Status, Credit limit and Previous payments.  The objective of this project is to build and implement a ML model which predicts whether a customer will default on a payment or not.
 
